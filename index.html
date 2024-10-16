@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Menu page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Food Delivery</h1>
+<h2> MENU</h2>
+    <table>
+        
+        <thead>
+            <tr>
+
+                <th>Dish Name</th>
+                <th>Description</th>
+                <th>Price</th> 
+        
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Chicken Pizza</td>
+                <td>Classic pizza with tomatoes paste, topping with chicken and vegetables.</td>
+                <td>Rs.800</td>
+            </tr>
+            <tr>
+                <td>C.MOMO<C class="MoMo"></C></td>
+                <td>Fried momo with capsicum and onion with ketch up.</td>
+                <td>Rs.300</td>
+            </tr>
+            <tr>
+                <td>Pasta</td>
+                <td>Pasta with creamy sauce, and meat according to customer .</td>
+                <td>Rs.400</td>
+            </tr>
+            <tr>
+                <td>Fried Rice</td>
+                <td> fried rice with fresh vegetables.</td>
+                <td>Rs. 200</td>
+            </tr>
+            <tr>
+                <td>Sukuti</td>
+                <td>dry meat with sadeko green vegetables, spicy with your choice .</td>
+                <td>Rs.500</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+    <form id="orderForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+        </form> <br>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required> <br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone">
+
+        <label for="menu">Select Food Items:</label>
+        <select id="menu" name="menu" multiple required>
+            <label for=""> <option value="Chicken Pizza">Chicken Pizza</option>
+             <option value="C.MOMO">C.MOMO</option>
+             <option value="Pasta">Pasta </option>
+             <option value="Fried Rice">Fried Rice</option>
+             <option value="Sukuti">Sukuti</option> </label>
+        </select>
+
+        <label for="quantity">Quantity:</label>
+        <input type="text" id="quantity" name="quantity" required>
+
+        <br><label for="address">Delivery Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+
+        <button type="submit">Confirm Order</button>
+    </form>
+
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            alert('Order placed successfully!');
+            event.preventDefault(); // Prevents the form from submitting for demo purposes
+        });
+    </script>
+
+</body>
+</html>
